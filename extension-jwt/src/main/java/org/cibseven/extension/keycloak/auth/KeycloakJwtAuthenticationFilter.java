@@ -32,11 +32,11 @@ public class KeycloakJwtAuthenticationFilter extends ContainerBasedAuthenticatio
     private static final String GET_METHOD = "GET";
     private String processEngineName = ProcessEngines.NAME_DEFAULT;
 
-    private String camundaApplicationPath = "";
+    private String cibsevenApplicationPath = "";
 
-    public KeycloakJwtAuthenticationFilter(String camundaApplicationPath) {
-        if (StringUtils.hasLength(camundaApplicationPath)) {
-            this.camundaApplicationPath = camundaApplicationPath;
+    public KeycloakJwtAuthenticationFilter(String cibsevenApplicationPath) {
+        if (StringUtils.hasLength(cibsevenApplicationPath)) {
+            this.cibsevenApplicationPath = cibsevenApplicationPath;
         }
     }
 
@@ -90,7 +90,7 @@ public class KeycloakJwtAuthenticationFilter extends ContainerBasedAuthenticatio
 
     @Override
     protected String extractEngineName(HttpServletRequest request) {
-        String requestUri = request.getRequestURI().substring(camundaApplicationPath.length());
+        String requestUri = request.getRequestURI().substring(cibsevenApplicationPath.length());
         Matcher apiStaticPluginPattern = API_STATIC_PLUGIN_PATTERN.matcher(requestUri);
         if (request.getMethod().equals(GET_METHOD) && apiStaticPluginPattern.matches()) {
             return null;

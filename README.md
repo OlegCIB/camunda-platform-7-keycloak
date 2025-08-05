@@ -25,10 +25,16 @@ This plugin provides the basis for using Keycloak as Identity Management solutio
 **Beware: in case you want to use Keycloak's advanced login capabilities for social connections you must configure SSO as well.**
 Password grant exchanges are only supported for Keycloak's internally managed users and users of an LDAP / Keberos User federation. Hence without SSO you will only be able to login with users managed by such connections.
 
-Current version: `7.23.0`<br >
-Latest tests with: Keycloak `26.1.2`, `19.0.3-legacy`, CIB seven `7.23.0`, `7.23.0-ee`
+Current version: `2.1.0-SNAPSHOT`<br >
+Latest tests with: Keycloak `26.1.2`, `19.0.3-legacy`, CIB seven `2.1.0-SNAPSHOT`
 
 #### Features
+Changes in version `2.1.0-SNAPSHOT`
+
+* Migration to CIB seven 2.1.0-SNAPSHOT namespace and branding
+* Updated to use CIB seven community hub parent
+* Complete migration from Camunda Platform 7 to CIB seven ecosystem
+
 Changes in version `7.23.0`
 
 * Upgrade to CIB seven 7.23.0
@@ -86,7 +92,7 @@ Maven Dependencies:
 <dependency>
     <groupId>org.cibseven</groupId>
     <artifactId>cibseven-keycloak</artifactId>
-    <version>7.23.0</version>
+    <version>2.1.0-SNAPSHOT</version>
 </dependency>
 ```
 
