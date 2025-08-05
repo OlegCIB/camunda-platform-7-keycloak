@@ -20,9 +20,10 @@
 	</properties>
 
 	<dependencies>
+		<!-- TODO: Replace with CIB seven engine when available -->
 		<dependency>
-			<groupId>org.cibseven.bpm</groupId>
-			<artifactId>cibseven-engine</artifactId>
+			<groupId>org.camunda.bpm</groupId>
+			<artifactId>camunda-engine</artifactId>
 			<scope>provided</scope>
 		</dependency>
 
@@ -31,9 +32,10 @@
 		    <artifactId>spring-web</artifactId>
 		</dependency>
 
+		<!-- TODO: Replace with CIB seven commons when available -->
 		<dependency>
-			<groupId>org.cibseven.commons</groupId>
-			<artifactId>cibseven-commons-logging</artifactId>
+			<groupId>org.camunda.commons</groupId>
+			<artifactId>camunda-commons-logging</artifactId>
 		</dependency>
 
 		<!-- http client 5 -->
@@ -58,9 +60,10 @@
 			<artifactId>caffeine</artifactId>
 		</dependency>
 
+		<!-- TODO: Replace with CIB seven Spring Boot starter when available -->
 		<dependency>
-			<groupId>org.cibseven.bpm.springboot</groupId>
-			<artifactId>cibseven-bpm-spring-boot-starter-test</artifactId>
+			<groupId>org.camunda.bpm.springboot</groupId>
+			<artifactId>camunda-bpm-spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
  		

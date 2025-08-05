@@ -1,4 +1,4 @@
-package org.camunda.bpm.extension.keycloak.showcase.test.bpm.integration;
+package org.cibseven.bpm.extension.keycloak.showcase.test.bpm.integration;
 
 import static org.camunda.bpm.engine.test.assertions.bpmn.AbstractAssertions.init;
 import static org.camunda.bpm.engine.test.assertions.bpmn.BpmnAwareTests.assertThat;
@@ -6,15 +6,15 @@ import static org.camunda.bpm.engine.test.assertions.bpmn.BpmnAwareTests.complet
 import static org.camunda.bpm.engine.test.assertions.bpmn.BpmnAwareTests.runtimeService;
 import static org.camunda.bpm.engine.test.assertions.bpmn.BpmnAwareTests.task;
 import static org.camunda.bpm.engine.test.assertions.bpmn.BpmnAwareTests.withVariables;
-import static org.camunda.bpm.extension.keycloak.showcase.test.util.ProcessTestAssertions.waitUntil;
+import static org.cibseven.extension.keycloak.showcase.test.util.ProcessTestAssertions.waitUntil;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 import org.apache.ibatis.logging.LogFactory;
-import org.camunda.bpm.engine.ProcessEngine;
-import org.camunda.bpm.engine.runtime.ProcessInstance;
-import org.camunda.bpm.engine.task.Task;
-import org.camunda.bpm.extension.keycloak.showcase.ProcessConstants.Variable;
-import org.camunda.bpm.extension.keycloak.showcase.plugin.KeycloakIdentityProvider;
+import org.camunda.bmp.engine.ProcessEngine;
+import org.camunda.bmp.engine.runtime.ProcessInstance;
+import org.camunda.bmp.engine.task.Task;
+import org.cibseven.extension.keycloak.showcase.ProcessConstants.Variable;
+import org.cibseven.extension.keycloak.showcase.plugin.KeycloakIdentityProvider;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

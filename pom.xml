@@ -4,10 +4,11 @@
 
   <!-- Attention: to properly separate dependencies of extension and examples, do not define any dependencies/management here! -->
 
+  <!-- Temporarily using community parent until CIB seven parent is available -->
   <parent>
-    <groupId>org.cibseven.community</groupId>
-    <artifactId>release-parent</artifactId>
-    <version>1.1.0-SNAPSHOT</version>
+    <groupId>org.camunda.community</groupId>
+    <artifactId>community-hub-release-parent</artifactId>
+    <version>2.1.0</version>
   </parent>
 
   <groupId>org.cibseven</groupId>
@@ -23,7 +24,7 @@
     <project.build.sourceEncoding>${encoding}</project.build.sourceEncoding>
     <project.build.resourceEncoding>${encoding}</project.build.resourceEncoding>
 
-    <!-- versions -->
+    <!-- versions - TODO: Update to CIB seven versions when available -->
 	<version.cibseven>7.23.0</version.cibseven>
     <!-- <version.cibseven>7.23.0-ee</version.cibseven> -->
 	<version.springBoot>3.4.5</version.springBoot>
@@ -73,9 +74,10 @@
   
   <dependencyManagement>
     <dependencies>
+      <!-- TODO: Replace with CIB seven BOM when available -->
       <dependency>
-        <groupId>org.cibseven.bpm</groupId>
-        <artifactId>cibseven-bom</artifactId>
+        <groupId>org.camunda.bpm</groupId>
+        <artifactId>camunda-bom</artifactId>
         <version>${version.cibseven}</version>
         <scope>import</scope>
         <type>pom</type>
@@ -103,18 +105,19 @@
     </dependencies>
   </dependencyManagement>
 
+  <!-- TODO: Update repository URLs when CIB seven infrastructure is available -->
   <repositories>
-    <!-- CIB seven Repository -->
+    <!-- Camunda Repository - TODO: Replace with CIB seven repository -->
     <repository>
-        <id>cibseven-bpm</id>
-        <name>CIB seven Maven Repository</name>
-        <url>https://artifacts.cibseven.org/artifactory/cibseven-bpm/</url>
+        <id>camunda-bpm</id>
+        <name>Camunda Enterprise Maven Repository</name>
+        <url>https://artifacts.camunda.com/artifactory/camunda-bpm/</url>
     </repository>
-    <!-- CIB seven EE Repository 
+    <!-- Camunda EE Repository 
     <repository>
-        <id>cibseven-bpm-ee</id>
-        <name>CIB seven Enterprise Maven Repository</name>
-        <url>https://artifacts.cibseven.org/artifactory/cibseven-bpm-ee/</url>
+        <id>camunda-bpm-ee</id>
+        <name>Camunda Enterprise Maven Repository</name>
+        <url>https://artifacts.camunda.com/artifactory/camunda-bpm-ee/</url>
     </repository>
     -->
   </repositories>
@@ -139,8 +142,9 @@
           <legacyMode>true</legacyMode>
           <additionalDependencies>
             <dependency>
-              <groupId>org.cibseven.bpm</groupId>
-              <artifactId>cibseven-engine</artifactId>
+              <!-- TODO: Replace with CIB seven engine when available -->
+              <groupId>org.camunda.bpm</groupId>
+              <artifactId>camunda-engine</artifactId>
               <version>${version.cibseven}</version>
             </dependency>
           </additionalDependencies>

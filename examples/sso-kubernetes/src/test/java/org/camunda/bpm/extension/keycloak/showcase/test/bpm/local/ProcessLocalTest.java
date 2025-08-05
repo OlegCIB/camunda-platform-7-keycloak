@@ -1,4 +1,4 @@
-package org.camunda.bpm.extension.keycloak.showcase.test.bpm.local;
+package org.cibseven.bpm.extension.keycloak.showcase.test.bpm.local;
 
 import static org.camunda.bpm.engine.test.assertions.bpmn.AbstractAssertions.init;
 import static org.camunda.bpm.engine.test.assertions.bpmn.BpmnAwareTests.assertThat;
@@ -14,14 +14,14 @@ import static org.mockito.Mockito.reset;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 
-import org.camunda.bpm.engine.delegate.DelegateExecution;
-import org.camunda.bpm.engine.runtime.ProcessInstance;
-import org.camunda.bpm.engine.task.Task;
-import org.camunda.bpm.engine.test.Deployment;
-import org.camunda.bpm.engine.test.mock.Mocks;
-import org.camunda.bpm.extension.junit5.test.ProcessEngineExtension;
-import org.camunda.bpm.extension.keycloak.showcase.ProcessConstants.Variable;
-import org.camunda.bpm.extension.keycloak.showcase.task.LoggerDelegate;
+import org.camunda.bmp.engine.delegate.DelegateExecution;
+import org.camunda.bmp.engine.runtime.ProcessInstance;
+import org.camunda.bmp.engine.task.Task;
+import org.camunda.bmp.engine.test.Deployment;
+import org.camunda.bmp.engine.test.mock.Mocks;
+import org.camunda.bmp.extension.junit5.test.ProcessEngineExtension;
+import org.cibseven.extension.keycloak.showcase.ProcessConstants.Variable;
+import org.cibseven.extension.keycloak.showcase.task.LoggerDelegate;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

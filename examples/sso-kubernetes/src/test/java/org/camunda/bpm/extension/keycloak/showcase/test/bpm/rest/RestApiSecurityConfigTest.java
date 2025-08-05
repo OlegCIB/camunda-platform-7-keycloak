@@ -1,4 +1,4 @@
-package org.camunda.bpm.extension.keycloak.showcase.test.bpm.rest;
+package org.cibseven.bpm.extension.keycloak.showcase.test.bpm.rest;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.camunda.bpm.engine.test.assertions.bpmn.AbstractAssertions.init;
@@ -6,8 +6,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.fail;
 
 import org.apache.ibatis.logging.LogFactory;
-import org.camunda.bpm.engine.ProcessEngine;
-import org.camunda.bpm.extension.keycloak.showcase.test.KeycloakTestcontainer;
+import org.camunda.bmp.engine.ProcessEngine;
+import org.cibseven.extension.keycloak.showcase.test.KeycloakTestcontainer;
 import org.json.JSONObject;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

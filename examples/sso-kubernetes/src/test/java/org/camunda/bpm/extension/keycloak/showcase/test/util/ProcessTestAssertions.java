@@ -1,9 +1,9 @@
-package org.camunda.bpm.extension.keycloak.showcase.test.util;
+package org.cibseven.bpm.extension.keycloak.showcase.test.util;
 
-import org.camunda.bpm.engine.history.HistoricProcessInstance;
-import org.camunda.bpm.engine.runtime.ProcessInstance;
-import org.camunda.bpm.engine.test.assertions.bpmn.BpmnAwareTests;
-import org.camunda.bpm.engine.test.assertions.bpmn.ProcessInstanceAssert;
+import org.camunda.bmp.engine.history.HistoricProcessInstance;
+import org.camunda.bmp.engine.runtime.ProcessInstance;
+import org.camunda.bmp.engine.test.assertions.bpmn.BpmnAwareTests;
+import org.camunda.bmp.engine.test.assertions.bpmn.ProcessInstanceAssert;
 
 /**
  * Assert methods for process tests.

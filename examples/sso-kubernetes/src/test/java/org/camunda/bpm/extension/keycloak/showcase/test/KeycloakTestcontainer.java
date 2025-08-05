@@ -1,4 +1,4 @@
-package org.camunda.bpm.extension.keycloak.showcase.test;
+package org.cibseven.bpm.extension.keycloak.showcase.test;
 
 import dasniko.testcontainers.keycloak.KeycloakContainer;
 import java.util.Map;

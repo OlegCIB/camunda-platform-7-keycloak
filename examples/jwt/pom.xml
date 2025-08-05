@@ -3,12 +3,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>org.camunda.bpm.extension.examples</groupId>
-        <artifactId>camunda-platform-7-keycloak-examples</artifactId>
+        <groupId>org.cibseven.examples</groupId>
+        <artifactId>cibseven-keycloak-examples</artifactId>
         <version>7.23.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>camunda-platform-7-keycloak-examples-jwt</artifactId>
+    <artifactId>cibseven-keycloak-examples-jwt</artifactId>
 
     <name>Camunda Platform 7 - engine plugins - identity - keycloak - jwt example - showcase</name>
     <description>Showcase for using Camunda Platform 7 Keycloak Identity Provider with JWT auth</description>
@@ -36,13 +36,13 @@
 
         <!-- Keycloak Identity Prover Plugin  -->
         <dependency>
-            <groupId>org.camunda.bpm.extension</groupId>
-            <artifactId>camunda-platform-7-keycloak</artifactId>
+            <groupId>org.cibseven</groupId>
+            <artifactId>cibseven-keycloak</artifactId>
         </dependency>
 
         <dependency>
-            <groupId>org.camunda.bpm.extension</groupId>
-            <artifactId>camunda-platform-7-keycloak-jwt</artifactId>
+            <groupId>org.cibseven</groupId>
+            <artifactId>cibseven-keycloak-jwt</artifactId>
         </dependency>
 
         <!-- Database -->
@@ -80,7 +80,7 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>org.camunda.bpm.extension</groupId>
+            <groupId>org.cibseven</groupId>
             <artifactId>camunda-bpm-junit5</artifactId>
             <version>1.1.0</version>
             <scope>test</scope>
@@ -136,7 +136,7 @@
                 <artifactId>exec-maven-plugin</artifactId>
                 <version>3.1.1</version>
                 <configuration>
-                    <mainClass>org.camunda.bpm.extension.keycloak.org.camunda.bpm.extension.keycloak.showcase.CamundaApplication</mainClass>
+                    <mainClass>org.cibseven.keycloak.org.cibseven.keycloak.showcase.CamundaApplication</mainClass>
                 </configuration>
             </plugin>
         </plugins>
