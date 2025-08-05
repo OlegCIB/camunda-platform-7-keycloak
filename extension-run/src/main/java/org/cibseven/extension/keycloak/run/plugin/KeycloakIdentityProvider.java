@@ -1,6 +1,6 @@
-package org.cibseven.bpm.extension.keycloak.run.plugin;
+package org.cibseven.extension.keycloak.run.plugin;
 
-import org.camunda.bmp.extension.keycloak.plugin.KeycloakIdentityProviderPlugin;
+import org.cibseven.extension.keycloak.plugin.KeycloakIdentityProviderPlugin;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Component;

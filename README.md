@@ -1,54 +1,54 @@
-# Camunda Platform 7 - Keycloak Identity Provider Plugin
-[![](https://img.shields.io/badge/Community%20Extension-An%20open%20source%20community%20maintained%20project-FF4700)](https://github.com/camunda-community-hub/community)
-![](https://img.shields.io/badge/Compatible%20with-Camunda%20Platform%207-26d07c)
-[![](https://img.shields.io/badge/Lifecycle-Stable-brightgreen)](https://github.com/Camunda-Community-Hub/community/blob/main/extension-lifecycle.md#stable-)
-[![Maven Central](https://maven-badges.herokuapp.com/maven-central/org.camunda.bpm.extension/camunda-platform-7-keycloak/badge.svg)](https://maven-badges.herokuapp.com/maven-central/org.camunda.bpm.extension/camunda-platform-7-keycloak)
+# CIB seven - Keycloak Identity Provider Plugin
+[![](https://img.shields.io/badge/Community%20Extension-An%20open%20source%20community%20maintained%20project-FF4700)](https://github.com/cibseven-community-hub/community)
+![](https://img.shields.io/badge/Compatible%20with-CIB%20seven-26d07c)
+[![](https://img.shields.io/badge/Lifecycle-Stable-brightgreen)](https://github.com/CIB-seven-Community-Hub/community/blob/main/extension-lifecycle.md#stable-)
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/org.cibseven/cibseven-keycloak/badge.svg)](https://maven-badges.herokuapp.com/maven-central/org.cibseven/cibseven-keycloak)
  [![Apache License V.2](https://img.shields.io/badge/license-Apache%20V.2-blue.svg)](./LICENSE)
 
 **Important Notice**
 
 > [!CAUTION]
-> Camunda announced that the Camunda 7 Community Edition will EOL (end of life) in October 2025 with a final release 7.24. This community-maintained project is based on Camunda 7 CE and will therefore also have its final release 7.24 in fall 2025. After that, it will no longer be maintained.
-> I would like to thank the entire Camunda community for their great collaboration on this project. Without all of you, this plugin would not have become what it is! Thanks :trophy:
+> CIB seven is the community-maintained continuation of Camunda 7. While the original Camunda 7 Community Edition reached end of life in October 2025 with final release 7.24, CIB seven continues to evolve as an independent open-source BPM platform. This plugin provides full compatibility with CIB seven and continues to receive active development and community support.
+> We thank the entire CIB seven community for their collaboration and dedication to keeping this powerful BPM platform alive and thriving! :trophy:
 
 ![Keycloak](doc/keycloak.png "https://www.keycloak.org/") 
 
 Keycloak&trade; (<https://www.keycloak.org/>) is an Open Source Identity and Access Management platform including advanced features such as User Federation, Identity Brokering and Social Login.
 
-Camunda&trade; (<https://camunda.com/>) Platform 7 is perfectly suited to carry out BPM projects in the cloud. Identity management in the cloud, however, often differs from classical approaches. Camunda already provides a generic sample for Single Sign On when using Spring Boot. See <https://github.com/camunda-consulting/code/tree/master/snippets/springboot-security-sso>.
+CIB seven (<https://cibseven.org/>) is perfectly suited to carry out BPM projects in the cloud. Identity management in the cloud, however, often differs from classical approaches. CIB seven already provides a generic sample for Single Sign On when using Spring Boot. See <https://github.com/cibseven-consulting/code/tree/master/snippets/springboot-security-sso>.
 Specific instructions on how to use Spring Boots OAuth2 SSO in combination with this Keycloak Identity Provider Plugin can be found below.
 
-**Why this plugin?** SSO is sufficient in case you only want authentication but have no further advanced security roles. If one needs to use Camundas IdentityService APIs or wants to see actual Users and Groups show up in Cockpit, a custom IdentityProvider needs to be implemented as well.
+**Why this plugin?** SSO is sufficient in case you only want authentication but have no further advanced security roles. If one needs to use CIB seven's IdentityService APIs or wants to see actual Users and Groups show up in Cockpit, a custom IdentityProvider needs to be implemented as well.
 
-This plugin provides the basis for using Keycloak as Identity Management solution and will provide a ReadOnlyIdentityProvider. What you will get is a fully integrated solution for using Keycloak as an Identity Provider in Camunda receiving users and groups from Keycloak. The authorization of these users and groups for Camunda resources itself remains within Camunda. This plugin allows the usage of Keycloak as Identity Provider even without SSO.
+This plugin provides the basis for using Keycloak as Identity Management solution and will provide a ReadOnlyIdentityProvider. What you will get is a fully integrated solution for using Keycloak as an Identity Provider in CIB seven receiving users and groups from Keycloak. The authorization of these users and groups for CIB seven resources itself remains within CIB seven. This plugin allows the usage of Keycloak as Identity Provider even without SSO.
   
 **Beware: in case you want to use Keycloak's advanced login capabilities for social connections you must configure SSO as well.**
 Password grant exchanges are only supported for Keycloak's internally managed users and users of an LDAP / Keberos User federation. Hence without SSO you will only be able to login with users managed by such connections.
 
 Current version: `7.23.0`<br >
-Latest tests with: Keycloak `26.1.2`, `19.0.3-legacy`, Camunda `7.23.0`, `7.23.0-ee`
+Latest tests with: Keycloak `26.1.2`, `19.0.3-legacy`, CIB seven `7.23.0`, `7.23.0-ee`
 
 #### Features
 Changes in version `7.23.0`
 
-* Upgrade to Camunda Platform 7.23.0
+* Upgrade to CIB seven 7.23.0
 
 Changes in version `7.22.0`
 
-* Upgrade to Camunda Platform 7.22.0
+* Upgrade to CIB seven 7.22.0
 
 Changes in version `7.21.6`
 
-* Upgrade to Camunda Platform 7.21.0
+* Upgrade to CIB seven 7.21.0
 * New configuration flag `enforceSubgroupsInGroupQuery` for enforcing subgroups in query results when using Keycloak >= `23.0.0`
 * Use exact match when querying for a single user by ID and thus prevent problems when a huge number of similar usernames exist
 * Added truststore support
 
 Changes in version `7.20.1`
 
-With version 7.20.0 Camunda Platform 7 switched to Spring Boot 3.1, JakartaEE 10 and a JDK 17 baseline. The Keycloak Identity Provider Plugin has been updated to support the new baseline versions of it's major dependencies.
+With version 7.20.0 CIB seven switched to Spring Boot 3.1, JakartaEE 10 and a JDK 17 baseline. The Keycloak Identity Provider Plugin has been updated to support the new baseline versions of it's major dependencies.
 
-* Upgrade to Camunda Platform 7.20.0
+* Upgrade to CIB seven 7.20.0
 * Upgrade to Apache HttpComponents HttpClient 5
 * Upgrade to Spring Boot 3.1.x
 * Updated samples to Spring Security 6.1
@@ -63,11 +63,11 @@ Known limitations:
 ## Prerequisites in your Keycloak realm
 
 1. Keycloak docker images can be found on [Keycloak Docker Hub](https://hub.docker.com/r/keycloak/keycloak "Keycloak Docker Images").
-2. Create a new client named `camunda-identity-service` with access type confidential and service accounts enabled:
+2. Create a new client named `cibseven-identity-service` with access type confidential and service accounts enabled:
     ![IdentityServiceSettings](doc/identity-service_settings.png "Identity Service Settings")
    Please be aware, that beginning with Keycloak 18, you do not only have to configure a valid redirect URL, but
    a valid post logout redirect URL as well. To keep things easy values can be the same.
-3. Since Keycloak 20, user queries require an 'openid' scope for OIDC clients. To enable this, create an 'openid' scope under client scopes and add add this the `camunda-identity-service` client.
+3. Since Keycloak 20, user queries require an 'openid' scope for OIDC clients. To enable this, create an 'openid' scope under client scopes and add add this the `cibseven-identity-service` client.
 ![openid-client-scope.png](doc/openid-clientscope.png "Client scopes") 
 4. In order to use refresh tokens set the "Use Refresh Tokens For Client Credentials Grant" option within the "OpenID Connect Compatibility Modes" section (available in newer Keycloak versions):
 
@@ -76,28 +76,28 @@ Known limitations:
     ![IdentityServiceRoles](doc/identity-service_roles.png "Identity Service Roles")
 6. Your client credentials can be found here:
     ![IdentityServiceCredentials](doc/identity-service_credentials.png "Identity Service Credentials")
-7. Once you're done with the basic setup you're now ready to manage your users and groups with Keycloak. Please keep in mind, that in order to make the Keycloak Identity Provider work, you will need at least one dedicated Camunda admin group or Camunda admin user in your realm. Whether you create this group/user manually or import it using the LDAP user federation or any other Identity Provider is up to you.
+7. Once you're done with the basic setup you're now ready to manage your users and groups with Keycloak. Please keep in mind, that in order to make the Keycloak Identity Provider work, you will need at least one dedicated CIB seven admin group or CIB seven admin user in your realm. Whether you create this group/user manually or import it using the LDAP user federation or any other Identity Provider is up to you.
     ![KeycloakGroups](doc/keycloak-groups.png "Keycloak Realm Groups")
 
-## Usage with Camunda Spring Boot
+## Usage with CIB seven Spring Boot
 
 Maven Dependencies:
 ```xml
 <dependency>
-    <groupId>org.camunda.bpm.extension</groupId>
-    <artifactId>camunda-platform-7-keycloak</artifactId>
+    <groupId>org.cibseven</groupId>
+    <artifactId>cibseven-keycloak</artifactId>
     <version>7.23.0</version>
 </dependency>
 ```
 
-Add the following class to your Camunda Spring Boot application in order to activate the Keycloak Identity Provider Plugin:
+Add the following class to your CIB seven Spring Boot application in order to activate the Keycloak Identity Provider Plugin:
 
 ```java
 package <your-package>;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
-import org.camunda.bpm.extension.keycloak.plugin.KeycloakIdentityProviderPlugin;
+import org.cibseven.extension.keycloak.plugin.KeycloakIdentityProviderPlugin;
 
 @Component
 @ConfigurationProperties(prefix="plugin.identity.keycloak")
@@ -108,7 +108,7 @@ public class KeycloakIdentityProvider extends KeycloakIdentityProviderPlugin {
 Configuration in `application.yaml` will then look as follows:
 
 ```yml
-camunda.bpm:
+cibseven.bpm:
   ...
   authorization:
     enabled: true
@@ -116,21 +116,21 @@ camunda.bpm:
 plugin.identity.keycloak:
   keycloakIssuerUrl: https://<your-keycloak-server>/auth/realms/<realm-name>
   keycloakAdminUrl: https://<your-keycloak-server>/auth/admin/realms/<realm-name>
-  clientId: camunda-identity-service
+  clientId: cibseven-identity-service
   clientSecret: 42aa42bb-1234-4242-a24a-42a2b420cde0
   useEmailAsCamundaUserId: true
-  administratorGroupName: camunda-admin
+  administratorGroupName: cibseven-admin
 ```
 
-Hint: the engine must **not** create a user upon startup - the plugin is a *ReadOnly*IdentityProvider. Hence you must **not** configure an `admin-user` for `camunda.bpm` in your `application.yaml`. The following configuration will likely cause errors upon startup: 
+Hint: the engine must **not** create a user upon startup - the plugin is a *ReadOnly*IdentityProvider. Hence you must **not** configure an `admin-user` for `cibseven.bpm` in your `application.yaml`. The following configuration will likely cause errors upon startup: 
 
 ```yml
-camunda.bpm:
+cibseven.bpm:
 # DON'T DO THIS
   admin-user:
     id: demo
     password: demo
-    firstName: Camunda
+    firstName: CIB seven
 ```
 
 The `admin-user` part must be deleted in order to work properly. The recommended procedure for creating the admin user and admin group in Keycloak is to have the deployment pipeline do this during the environment setup phase.
@@ -143,9 +143,9 @@ A list of configuration options can be found below:
 | `keycloakAdminUrl`                | The admin URL of the Keycloak server REST API including the realm.<br />Sample for master realm: `https://<your-keycloak-server>/auth/admin/realms/master`                                                                                                                                                                                                                                                                              |
 | `clientId`                        | The Client ID of your application.                                                                                                                                                                                                                                                                                                                                                                                                      |
 | `clientSecret`                    | The Client Secret of your application.                                                                                                                                                                                                                                                                                                                                                                                                  |
-| `useEmailAsCamundaUserId`         | Whether to use the Keycloak email attribute as Camunda's user ID. Default is `false`.<br /><br />This is option is a fallback in case you don't use SSO and want to login using Camunda's web interface with your mail address and not the cryptic internal Keycloak ID. Keep in mind that you will only be able to login without SSO with Keycloak's internally managed users and users managed by the LDAP / Keberos User federation. |
-| `useUsernameAsCamundaUserId`      | Whether to use the Keycloak username attribute as Camunda's user ID. Default is `false`. In the default case the plugin will use the internal Keycloak ID as Camunda's user ID.                                                                                                                                                                                                                                                         |
-| `useGroupPathAsCamundaGroupId`    | Whether to use the Keycloak unique group path as Camunda's group ID. Default is `false`. In the default case the plugin will use the internal Keycloak ID as Camunda's group ID.<br />This flag is particularly useful in case you want to have human readable group IDs and recommended when using groups in Camunda's authorization management.<br />*Since 1.1.0*                                                                    |
+| `useEmailAsCamundaUserId`         | Whether to use the Keycloak email attribute as CIB seven's user ID. Default is `false`.<br /><br />This is option is a fallback in case you don't use SSO and want to login using CIB seven's web interface with your mail address and not the cryptic internal Keycloak ID. Keep in mind that you will only be able to login without SSO with Keycloak's internally managed users and users managed by the LDAP / Keberos User federation. |
+| `useUsernameAsCamundaUserId`      | Whether to use the Keycloak username attribute as CIB seven's user ID. Default is `false`. In the default case the plugin will use the internal Keycloak ID as CIB seven's user ID.                                                                                                                                                                                                                                                                         |
+| `useGroupPathAsCamundaGroupId`    | Whether to use the Keycloak unique group path as CIB seven's group ID. Default is `false`. In the default case the plugin will use the internal Keycloak ID as CIB seven's group ID.<br />This flag is particularly useful in case you want to have human readable group IDs and recommended when using groups in CIB seven's authorization management.<br />*Since 1.1.0*                                                                    |
 | `enforceSubgroupsInGroupQuery`    | Starting with Keycloak version 23 the group query without any other search parameters does not automatically return subgroups within the result. Set this flag to `true` in case you use subgroups together with Keycloak 23 or higher. Otherwise leave it to the default `false` and benefit from better performance.<br />*Since 7.21.1*                                                                                              |
 | `administratorGroupName`          | The name of the administrator group. If this name is set and engine authorization is enabled, the plugin will create group-level Administrator authorizations on all built-in resources.                                                                                                                                                                                                                                                |
 | `administratorUserId`             | The ID of the administrator user. If this ID is set and engine authorization is enabled, the plugin will create user-level Administrator authorizations on all built-in resources.                                                                                                                                                                                                                                                      |
@@ -194,7 +194,7 @@ On the downside this feature bypasses the password grant exchange function of Ke
 
 ## Activating Single Sign On
 
-In this part, we’ll discuss how to activate SSO – Single Sign On – for the Camunda Web App using Spring Boot and Spring Security 5.2.x OAuth 2.0 Client capabilities in combination with this plugin and Keycloak as authorization server.
+In this part, we’ll discuss how to activate SSO – Single Sign On – for the CIB seven Web App using Spring Boot and Spring Security 5.2.x OAuth 2.0 Client capabilities in combination with this plugin and Keycloak as authorization server.
 
 In order to setup Spring Boot's OAuth2 security add the following Maven dependencies to your project:
 
@@ -209,7 +209,7 @@ In order to setup Spring Boot's OAuth2 security add the following Maven dependen
 </dependency>
 ```
 
-What we need is a bridge between Spring Security and Camunda. Hence insert a KeycloakAuthenticationProvider as follows:
+What we need is a bridge between Spring Security and CIB seven. Hence insert a KeycloakAuthenticationProvider as follows:
 
 ```java
 /**
@@ -252,7 +252,7 @@ Last but not least add a security configuration and enable OAuth2 SSO:
 
 ```java
 /**
- * Camunda Web application SSO configuration for usage with KeycloakIdentityProviderPlugin.
+ * CIB seven Web application SSO configuration for usage with KeycloakIdentityProviderPlugin.
  */
 @ConditionalOnMissingClass("org.springframework.test.context.junit.jupiter.SpringExtension")
 @EnableWebSecurity
@@ -284,7 +284,7 @@ public class WebAppSecurityConfig {
 
         FilterRegistrationBean filterRegistration = new FilterRegistrationBean();
         filterRegistration.setFilter(new ContainerBasedAuthenticationFilter());
-        filterRegistration.setInitParameters(Collections.singletonMap("authentication-provider", "org.camunda.bpm.extension.keycloak.showcase.sso.KeycloakAuthenticationProvider"));
+        filterRegistration.setInitParameters(Collections.singletonMap("authentication-provider", "org.cibseven.extension.keycloak.showcase.sso.KeycloakAuthenticationProvider"));
         filterRegistration.setOrder(201); // make sure the filter is registered after the Spring Security Filter Chain
         filterRegistration.addUrlPatterns("/app/*");
         return filterRegistration;
@@ -317,20 +317,20 @@ spring.security.oauth2:
     registration:
       keycloak:
         provider: keycloak
-        client-id: camunda-identity-service
+        client-id: cibseven-identity-service
         client-secret: yyy2121abc21def2121ghi212132121abc21def2121ghi2121eyyy
         authorization-grant-type: authorization_code
         redirect-uri: "{baseUrl}/{action}/oauth2/code/{registrationId}"
         scope: openid, profile, email
     provider:
       keycloak:
-        issuer-uri: https://<your-keycloak-server>/auth/realms/camunda
-        authorization-uri: https://<your-keycloak-server>/auth/realms/camunda/protocol/openid-connect/auth
-        user-info-uri: https://<your-keycloak-server>/auth/realms/camunda/protocol/openid-connect/userinfo
-        token-uri: https://<your-keycloak-server>/auth/realms/camunda/protocol/openid-connect/token
-        jwk-set-uri: https://<your-keycloak-server>/auth/realms/camunda/protocol/openid-connect/certs
+        issuer-uri: https://<your-keycloak-server>/auth/realms/cibseven
+        authorization-uri: https://<your-keycloak-server>/auth/realms/cibseven/protocol/openid-connect/auth
+        user-info-uri: https://<your-keycloak-server>/auth/realms/cibseven/protocol/openid-connect/userinfo
+        token-uri: https://<your-keycloak-server>/auth/realms/cibseven/protocol/openid-connect/token
+        jwk-set-uri: https://<your-keycloak-server>/auth/realms/cibseven/protocol/openid-connect/certs
         # set user-name-attribute one of: 
-        # - sub                -> default; using keycloak ID as camunda user ID
+        # - sub                -> default; using keycloak ID as CIB seven user ID
         # - email              -> useEmailAsCamundaUserId=true
         # - preferred_username -> useUsernameAsCamundaUserId=true
         user-name-attribute: email
@@ -346,25 +346,25 @@ Keep in mind that Keycloak's `email` attribute might not always be unique, depen
 
 ## Quickstart
 
-As a quickstart into using and configuring the plugin we recommend to have a look at the [Installation on Camunda Platform Run](https://github.com/camunda-community-hub/camunda-platform-7-keycloak/tree/master/examples/run). You'll find a chapter "Docker Sample Setup" at the end of the README. This is a simple starting point.
+As a quickstart into using and configuring the plugin we recommend to have a look at the [Installation on CIB seven Run](https://github.com/cibseven-community-hub/cibseven-keycloak/tree/master/examples/run). You'll find a chapter "Docker Sample Setup" at the end of the README. This is a simple starting point.
 
 If your intention is a complete SSO setup on Kubernetes you'll be more happy with the next reference.
 
 ## Sample Spring Boot Project with SSO on Kubernetes
 
-A sample project using this plugin including a basic SSO and Kubernetes setup can be found under [Camunda Showcase for Spring Boot & Keycloak Identity Provider](https://github.com/camunda-community-hub/camunda-platform-7-keycloak/tree/master/examples/sso-kubernetes). See directory `examples`.
+A sample project using this plugin including a basic SSO and Kubernetes setup can be found under [CIB seven Showcase for Spring Boot & Keycloak Identity Provider](https://github.com/cibseven-community-hub/cibseven-keycloak/tree/master/examples/sso-kubernetes). See directory `examples`.
 
 ## Installation on Apache Tomcat with Shared Process Engine
 
-Even if from an architectural point of view Spring Boot is currently the most recommended approach for cloud scenarios, it is of course possible to install the plugin in other Camunda distributions as well. A description on how to install the plugin on an Apache Tomcat full distribution can be found under [Installation on Tomcat](https://github.com/camunda-community-hub/camunda-platform-7-keycloak/tree/master/examples/tomcat). See directory `examples`.
+Even if from an architectural point of view Spring Boot is currently the most recommended approach for cloud scenarios, it is of course possible to install the plugin in other Camunda distributions as well. A description on how to install the plugin on an Apache Tomcat full distribution can be found under [Installation on Tomcat](https://github.com/cibseven-community-hub/cibseven-keycloak/tree/master/examples/tomcat). See directory `examples`.
 
-## Installation on Camunda Platform Run
+## Installation on CIB seven Run
 
-A description on how to install the plugin on Camunda BPM Run can be found under [Installation on Camunda BPM Run](https://github.com/camunda-community-hub/camunda-platform-7-keycloak/tree/master/examples/run). See directory `examples`.
+A description on how to install the plugin on Camunda BPM Run can be found under [Installation on CIB seven Run](https://github.com/cibseven-community-hub/cibseven-keycloak/tree/master/examples/run). See directory `examples`.
 
 ## Installation on JBoss/Wildfly
 
-A description on how to install the plugin on a JBoss/Wildfly can be found under [Installation on JBoss/Wildfly](https://github.com/camunda-community-hub/camunda-platform-7-keycloak/tree/master/examples/wildfly). See directory `examples`.
+A description on how to install the plugin on a JBoss/Wildfly can be found under [Installation on JBoss/Wildfly](https://github.com/cibseven-community-hub/cibseven-keycloak/tree/master/examples/wildfly). See directory `examples`.
 
 ## Unit testing the plugin
 
@@ -421,8 +421,8 @@ Brought to you by:
 
 ## Resources
 
-* [Issue Tracker](https://github.com/camunda-community-hub/camunda-platform-7-keycloak/issues)
-* [Contributing](https://github.com/camunda-community-hub/camunda-platform-7-keycloak/blob/master/CONTRIBUTING.md)
+* [Issue Tracker](https://github.com/cibseven-community-hub/cibseven-keycloak/issues)
+* [Contributing](https://github.com/cibseven-community-hub/cibseven-keycloak/blob/master/CONTRIBUTING.md)
 
 ## Maintainer
 
