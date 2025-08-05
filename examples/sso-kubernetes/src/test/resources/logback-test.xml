@@ -17,12 +17,12 @@
 
   <logger name="org.springframework" level="info" />
 
-  <logger name="org.camunda" level="info" />
+  <logger name="org.cibseven" level="info" />
 <!-- 
-  <logger name="org.camunda" level="DEBUG"/>
+  <logger name="org.cibseven" level="DEBUG"/>
 -->
 
-  <logger name="org.camunda.bpm.engine.test" level="debug" />
+  <logger name="org.cibseven.engine.test" level="debug" />
 
 <!--
   <logger name="org.camunda.bpm.engine.bpmn.parser" level="debug" />
